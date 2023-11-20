@@ -47,3 +47,12 @@ To solve this, I had inform on top of the file where I am using the component th
 "use client";
 import React from "react";
 ```
+
+### Tech Debit
+
+Learned a notation when I have something that I have to left behind to finish later.
+
+```tsx
+//TODO describe what I have to do later
+
+```
