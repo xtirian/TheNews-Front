@@ -1,0 +1,81 @@
+@use "@/scss/mixin";
+@use "@/scss/var" as *;
+
+%flex_center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  @extend %flex_center;
+  height: 50px;
+  background-color: $secondary_color;
+  color: $text_color;
+  padding: 1rem;
+}
+
+.logo a {
+  @extend %flex_center;
+  gap: 10px;
+  @include mixin.LogoS;
+}
+
+.headerButton {
+  @extend %flex_center;
+
+  font-size: 2rem;
+
+  gap: 1rem;
+}
+
+.menu_lateral {
+  @extend %flex_center;
+  flex-direction: column;
+  background-color: $secondary_color;
+  color: $text_color;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 15vw;
+  padding: 2rem 0;
+}
+
+.menu_lateral .close_button {
+  font-size: 2rem;
+  position: absolute;
+  right: -20px;
+  top: 20px;
+}
+
+.menu_lateral .list {
+  list-style-type: none;
+}
+
+.opening_animation {
+  animation-name: openSideBar;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.closing_animation {
+  animation-name: closeSideBar;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes openSideBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes closeSideBar { 
+  100% {
+    transform: translateX(-110%);
+  }
+}
