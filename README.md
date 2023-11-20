@@ -54,8 +54,30 @@ Learned a notation when I have something that I have to left behind to finish la
 
 ```tsx
 //TODO describe what I have to do later
-
 ```
 
 ### Type of Form Event
-When trying to handler the Form event, the correct Type is ```React.FormEvent```, or I can use ```React.FormEvent<HTMLInputElement>```
+
+When trying to handler the Form event, the correct Type is `React.FormEvent`, or I can use `React.FormEvent<HTMLInputElement>`
+
+### SideBar slide smoothly
+
+I was facing a problem in the slide of sidebar. To opening it was opening well, but when I was closing, the slide bar was removed from DOM before the animation even started.
+
+So I had to create a second flag:
+
+```typescript
+const [opening, setOpening] = useState(false);
+```
+
+Then I used in button the first flag of opening to change the animation to closing animation, then, after the 2000ms they set off the MenuLateral out of DOM :
+
+```ts
+        onClick={() => {
+          setOpening(!opening);
+
+          setTimeout(() => {
+            setMenuLateral(!menuLateral);
+          }, 2000);}}
+
+```
