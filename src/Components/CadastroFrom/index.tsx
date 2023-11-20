@@ -2,12 +2,12 @@ import React from "react";
 
 const index = () => {
 
-  // const cadastrar = (e) => {
-  //   e.preventDefault()
-  // }
+  const cadastrar = (e:any) => {
+    e.preventDefault()
+  }
 
   return (
-    <form onSubmit={e => { e.preventDefault()}}>
+    <form onSubmit={cadastrar}>
       <div>
         <label htmlFor="nameInput">Nome</label>
         <input type="text" name="name" id="nameInput" />
