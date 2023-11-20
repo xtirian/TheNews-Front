@@ -1,0 +1,20 @@
+
+
+//TYPOGRAPHY
+@mixin LogoS{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@mixin Title{
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+@mixin description{
+  font-size: 1.6rem;
+}
+
+@mixin content{
+  font-size: 2.4rem;
+}
