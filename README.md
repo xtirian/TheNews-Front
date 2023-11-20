@@ -56,3 +56,6 @@ Learned a notation when I have something that I have to left behind to finish la
 //TODO describe what I have to do later
 
 ```
+
+### Type of Form Event
+When trying to handler the Form event, the correct Type is ```React.FormEvent```, or I can use ```React.FormEvent<HTMLInputElement>```
