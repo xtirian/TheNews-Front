@@ -28,4 +28,22 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## What I learned
 
+### 'use client'
+
+When I first passed the CadastroForm to the Cadastro Page, I got thi Error message:
+
+```bash
+Error: Event handlers cannot be passed to Client Component props.
+  <form onSubmit={function} children=...>
+                 ^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+```
+
+To solve this, I had inform on top of the file where I am using the component this line
+
+```tsx
+"use client";
+import React from "react";
+```
