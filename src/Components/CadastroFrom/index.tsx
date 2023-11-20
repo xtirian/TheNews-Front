@@ -5,13 +5,13 @@ const index = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
-  const cadastrar = (e: any) => {
+  const cadastrar = (e: React.FormEvent) => {
     e.preventDefault();
     //TODO send to server
   };
 
-  const alterarValores = (e: { target: { name: any; value: any } }) => {
-    const { name, value } = e.target;
+  const alterarValores = (e: React.FormEvent<HTMLInputElement> ) => {
+    const { name, value } = e.currentTarget;
 
     console.log(name,value)
 
@@ -44,15 +44,17 @@ const index = () => {
           name="nameInput"
           id="nameInput"
           onChange={alterarValores}
+          required
         />
       </div>
       <div>
         <label htmlFor="emailInput">E-mail</label>
         <input
-          type="text"
+          type="email"
           name="emailInput"
           id="emailInput"
           onChange={alterarValores}
+          required
         />
       </div>
       <div>
@@ -62,6 +64,7 @@ const index = () => {
           name="passwordInput"
           id="passwordInput"
           onChange={alterarValores}
+          required
         />
       </div>
       <button type="submit">Enviar</button>
