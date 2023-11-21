@@ -1,6 +1,24 @@
 # DNC News Front-end
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a News page project created as a Challeng from DNC School. This repository will contain only the front-end. If you wanna look the backend, [access here](https://www.google.com/search?q=was+not+done+yet+dictionary&client=ubuntu-sn&hs=CbH&sca_esv=584099460&channel=fs&biw=960&bih=968&tbs=li%3A1&sxsrf=AM9HkKnL9Sn1zXUBQhTp6G43wgfoWYbSgA%3A1700521223530&ei=B-VbZcHtH9vn1sQPtZG4-AY&ved=0ahUKEwiBjdib19OCAxXbs5UCHbUIDm8Q4dUDCA8&oq=was+not+done+yet+dictionary&gs_lp=Egxnd3Mtd2l6LXNlcnAiG3dhcyBub3QgZG9uZSB5ZXQgZGljdGlvbmFyeTIIECEYoAEYwwRIhBZQxQNY5gZwAXgAkAEAmAGgAaAB6wSqAQMwLjS4AQzIAQD4AQHCAg4QABiABBiKBRiGAxiwA8ICBxAjGLACGCfCAgoQIRigARjDBBgK4gMEGAEgQYgGAZAGBQ&sclient=gws-wiz-serp)
+
+## Table of Contents
+
+- [Technologies](#technologies)
+- [Getting started](#getting-started)
+- [Deploy on Vercel](#deploy-on-vercel)
+- [What I Learned](#what-i-learned)
+  - ['use client](#use-client)
+  - [Tech Debit concept](#tech-debit)
+  - [Type of Form Event](#type-of-form-event)
+  - [SideBar slide smoothly](#sidebar-slide-smoothly)
+
+
+## Technologies
+- React
+- Typescript
+- SCSS
+- Framework: NextJS
 
 ## Getting Started
 
