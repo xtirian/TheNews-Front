@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { FC } from "react";
 
 import "./style.scss";
+import '@/scss/global.scss'
 
 interface NewsContainerProps {
   originalNews: string;
