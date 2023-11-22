@@ -12,6 +12,7 @@ This is a News page project created as a Challeng from DNC School. This reposito
   - [Tech Debit concept](#tech-debit)
   - [Type of Form Event](#type-of-form-event)
   - [SideBar slide smoothly](#sidebar-slide-smoothly)
+  - [Passing props](#passing-props)
 
 
 ## Technologies
@@ -97,5 +98,53 @@ Then I used in button the first flag of opening to change the animation to closi
           setTimeout(() => {
             setMenuLateral(!menuLateral);
           }, 2000);}}
+
+```
+### Passing props
+
+This part was very easy at begning. I first used this line in newsContainer:
+
+```tsx
+const NewsContainer: FC<NewsContainerProps> = (article : JSX.Element )  => {...}
+```
+
+But I decided to create a News Feed who is recieving the list of news by props and then started the problem, because this typefication didn't worked when passing the list of objects that I recieved from API.
+
+So I had to create an external interface for the object I'll use to render the news container, and then create a second interface as a list. See bellow what I mean:
+
+```tsx
+
+xport interface APIKeys {
+  url: string;
+  source: {
+    name: string;
+  } ;
+  author: string;
+  publishedAt: string;
+  title: string;
+  urlToImage: string;
+  description: string;
+  content: string;
+}
+
+export interface APIKeysList {
+  
+  articles: APIKeys[]
+}
+
+export interface APIKeysArticle {
+  article: APIKeys
+}
+
+```
+
+Creating those interfaces I could properly re-type the news container in a way that looked more professional (for me), and now I had these two components using this interface:
+
+```tsx
+/// @Component/Feed
+const NewsFeedHome = ({ articles }: APIKeysList) => {...}
+
+/// @Component/Noticia
+const NewsContainer = ({article} : APIKeysArticle) => {..}
 
 ```
