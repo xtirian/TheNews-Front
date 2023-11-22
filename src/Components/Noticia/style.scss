@@ -14,6 +14,10 @@
   &-title {
     @include mixin.Title;
     margin-bottom: 1rem;
+
+    &:hover{
+      color: $terthiary_color
+    }
   }
   &-description {
     @include mixin.description;
@@ -24,6 +28,12 @@
   &-img {
     width: 100%;
     height: auto;
+  }
+
+  a{
+    &:hover{
+      color: $terthiary_color
+    }
   }
 }
 
