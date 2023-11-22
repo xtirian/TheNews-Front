@@ -8,7 +8,7 @@ export default function CadastroMenuLayout({
   return (
     <section>
 
-      
+      {/* TODO: PUT THE MENU FOR LOGIN E SIGN AREA */}
 
       {children}
     </section>

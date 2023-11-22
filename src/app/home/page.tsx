@@ -7,6 +7,7 @@ import { NewsService } from "@/api/handleAPI";
 
 import "./style.scss";
 import NewsFeedHome from "@/Components/Feed/HomeFeed";
+import Button from "@/Components/Button/Button";
 
 const Home: NextPage = () => {
   const [newsList, setNewsList] = useState([]);
@@ -23,8 +24,7 @@ const Home: NextPage = () => {
     getNews();
   }, []);
 
-  useEffect(() => {
-  }, [newsList]);
+  useEffect(() => {}, [newsList]);
 
   return (
     <section className="home_pageContainer">
@@ -37,7 +37,8 @@ const Home: NextPage = () => {
         ))}
       </div> */}
 
-          {/* TODO: REMOVE THIS IN THE FUTURE */}
+      {/* TODO: REMOVE THIS IN THE FUTURE */}
+      
     </section>
   );
 };
