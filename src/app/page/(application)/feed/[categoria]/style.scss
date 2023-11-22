@@ -1,0 +1,12 @@
+@use '../../../../../scss/var' as *;
+
+.feedPage_headTitle{
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 5rem;
+
+  font-size: 3.2rem;
+
+  color: $text_color
+}
+

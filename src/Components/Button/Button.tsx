@@ -8,7 +8,7 @@ const Button = ({
   children: React.ReactNode
 }) => {
   return (
-    <Link className='buttonVersion1' href={"/feed"}>{children}</Link>
+    <Link className='buttonVersion1' href={"/page/feed"}>{children}</Link>
   )
 }
 

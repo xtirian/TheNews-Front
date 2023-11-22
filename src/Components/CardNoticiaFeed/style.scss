@@ -1,0 +1,43 @@
+@use '../../scss/var' as *;
+
+.cardNews_Container{
+  color: $text_color;
+  
+  
+  max-width: 30%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    max-width: 45%;
+  }
+
+  @media screen and (max-width: 468px) {
+    max-width: 80%;
+  }
+
+  img{
+    width: 100%;
+    max-height: 200px;
+    object-fit: fill;
+  }
+
+  h2{
+    font-size: 2rem;
+
+    
+  }
+  
+  h2:hover{
+    color: $terthiary_color
+  }
+
+  p{
+    font-size: 1.4rem;
+  }
+
+  .link_to_original{
+    text-decoration: underline;
+  }
+
+}
+
