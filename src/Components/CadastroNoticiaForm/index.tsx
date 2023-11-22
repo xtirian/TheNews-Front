@@ -19,7 +19,7 @@ const CadastroNoticiaForm = () => {
     console.log(formulario);
   };
 
-  const aoAlterar = (e: React.FormEvent<HTMLInputElement>) => {
+  const aoAlterar = (e: React.FormEvent<HTMLInputElement> | React.ChangeEventHandler<HTMLTextAreaElement> | any) => {
     const { name, value } = e.currentTarget;
 
     setFormulario({
@@ -66,7 +66,7 @@ const CadastroNoticiaForm = () => {
       <div>
         <label htmlFor="content">Content</label>
 
-        <input type="text" name="content" id="content" onChange={aoAlterar} />
+        <textarea name="content" id="content" onChange={aoAlterar} />
 
         <span className="inputDetail">
           <ul style={{listStyleType: "disc"}}  >

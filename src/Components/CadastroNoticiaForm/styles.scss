@@ -24,7 +24,7 @@
 
     }
 
-    input{
+    input, textarea{
       border: none;
       background-color: $terthiary_color;
       color: $pure_white;
@@ -72,5 +72,9 @@
 
 
 input:focus ~ .inputDetail{
+  display: flex;
+}
+
+textarea:focus ~ .inputDetail{
   display: flex;
 }
