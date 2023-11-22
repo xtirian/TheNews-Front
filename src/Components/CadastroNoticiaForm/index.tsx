@@ -115,7 +115,7 @@ const CadastroNoticiaForm = () => {
         <span className="inputDetail">Tell where you get that news</span>
       </div>
       <div className="buttonGrid">
-      <button type="submit">Cadastrar</button>
+      <button type="submit">Save</button>
       </div>
       
     </form>
