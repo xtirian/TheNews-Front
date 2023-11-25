@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const index = () => {
+const CadastroForm = () => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -72,4 +72,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default CadastroForm;

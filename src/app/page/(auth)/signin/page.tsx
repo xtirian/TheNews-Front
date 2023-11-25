@@ -8,7 +8,9 @@ import Menu from "@/Components/Menu";
 const Cadastro = () => {
   return (
     <div>
-      <CadastroMenuLayout children={<Menu />} />
+      <CadastroMenuLayout >
+        {<Menu />}
+      </CadastroMenuLayout>
       <h1>Cadastro</h1>
       <CadastroForm />
     </div>

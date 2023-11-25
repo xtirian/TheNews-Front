@@ -6,7 +6,9 @@ import Menu from "@/Components/Menu";
 const Login = () => {
   return (
     <div>
-      <CadastroMenuLayout children={<Menu />} />
+      <CadastroMenuLayout >
+        {<Menu />}
+      </CadastroMenuLayout>
       <h1>Login</h1>
       <LoginForm />
     </div>

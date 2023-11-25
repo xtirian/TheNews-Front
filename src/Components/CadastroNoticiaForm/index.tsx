@@ -72,8 +72,8 @@ const CadastroNoticiaForm = () => {
           <ul style={{listStyleType: "disc"}}  >
             <li>Here you will define the main content </li>
             <li>
-              If you dont want to type everything, you can put a '... [+1096
-              chars]' " at final and define the link to the original news
+              If you dont want to type everything, you can put a &apos;... [+1096
+              chars]&apos; `&ldquo at final and define the link to the original news
             </li>
           </ul>
         </span>
