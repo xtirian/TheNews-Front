@@ -13,7 +13,7 @@ const LoginForm = () => {
 
     const result = await axios.post('http://localhost:8080/login', formulario)
     
-
+    console.log(result)
     //TODO colocar a checagem no servidor
   };
 
