@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import axios from "axios";
 
 const LoginForm = () => {
   const [formulario, setFormulario] = useState({
@@ -7,10 +8,11 @@ const LoginForm = () => {
     password: "",
   });
 
-  const logar = (e: React.FormEvent) => {
+  const logar = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    console.log(formulario);
+    const result = await axios.post('http://localhost:8080/login', formulario)
+    
 
     //TODO colocar a checagem no servidor
   };
@@ -19,7 +21,7 @@ const LoginForm = () => {
     const { name, value } = e.currentTarget;
 
     setFormulario({
-      ...formulario, //Aqui nós vamos pegar todas as informações já existentes na variável (ue estão vazias)
+      ...formulario, //Aqui nós vamos pegar todas as informações já existentes na variável (que estão vazias)
       [name]: value, //aqui nós vamos pegar o nome do input que vier e vamos alterar o "useState"
     });
   };
