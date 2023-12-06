@@ -1,8 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
+  const Router = useRouter();
+
   const [formulario, setFormulario] = useState({
     email: "",
     password: "",
@@ -10,10 +13,14 @@ const LoginForm = () => {
 
   const logar = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    const result = await axios.post('http://localhost:8080/login', formulario)
-    
-    console.log(result)
+    try{
+    const result = await axios.post("http://localhost:8080/login", formulario);
+    alert(result.data.message);
+    Router.push("/page/admin/news/create");}
+    catch (err : any) {
+      
+      alert(err.response.data.message)
+    }
     //TODO colocar a checagem no servidor
   };
 
