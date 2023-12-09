@@ -4,7 +4,6 @@ import React, { FC } from "react";
 
 import "./style.scss";
 import '@/scss/global.scss'
-import { NewsContainerProps } from "./NewsAttributes";
 import { handleNewsContainer } from "./handleNewsContainer";
 import { APIKeysArticle } from "@/api/interfaceAPI";
 
@@ -19,14 +18,14 @@ const NewsContainer = ({article} : APIKeysArticle) => {
 
       <div className="news_container-publish_info">
         <span className="author">          
-          <b>{article.author}</b> from <b>{article.source.name}</b>
+          <b>{article.author}</b> from <b>{article.NewsFrom}</b>
         </span>
 
         <span className="hole_pattern"></span>
 
         
-        <time dateTime={article.publishedAt} className="news_container-publishdate">
-          {handleNewsContainer.handleDate(article.publishedAt)}
+        <time dateTime={article.date} className="news_container-publishdate">
+          {handleNewsContainer.handleDate(article.date)}
         </time>
 
 
@@ -34,7 +33,7 @@ const NewsContainer = ({article} : APIKeysArticle) => {
 
 
       <img
-        src={article.urlToImage}
+        src={article.imgURL}
         alt={article.title + "news"}
         className="news_container-img"
       />

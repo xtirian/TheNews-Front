@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Menu from "@/Components/Menu/index";
 import { NextPage } from "next";
 import NewsContainer from "@/Components/Noticia";
-import { NewsService } from "@/api/handleAPI";
+import { BackEndService, NewsService } from "@/api/handleAPI";
 
 import "./style.scss";
 import NewsFeedHome from "@/Components/Feed/HomeFeed";
@@ -11,13 +11,21 @@ import NewsFeedHome from "@/Components/Feed/HomeFeed";
 const Home: NextPage = () => {
   const [newsList, setNewsList] = useState([]);
 
-  const getNews = async () => {
+  /*const getNews = async () => {
     let {
       data: { articles },
     } = await NewsService.getTopHeadLinesUS();
 
     setNewsList(articles);
-  };
+  };*/
+
+  const getNews = async () => {
+    let result = await BackEndService.getNews();
+
+    if( result || result !== null || result !== undefined) {
+      setNewsList(result)
+    }
+  }
 
   useEffect(() => {
     getNews();

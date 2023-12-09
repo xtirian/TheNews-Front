@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { NewsContainerProps } from "./NewsAttributes";
 import { createElement } from "react";
-import { APIKeys } from "@/api/interfaceAPI";
+import { BackendKeys } from "@/api/interfaceAPI";
 
 export class handleNewsContainer {
   static handleDate(newsDate: string | number | Date) {
@@ -26,7 +26,7 @@ export class handleNewsContainer {
     }
   }
 
-  static handleLink(article: APIKeys | any) {
+  static handleLink(article: BackendKeys | any) {
     if (article.content) {
       const content = article.content.split(" ");
       const link = article.url;
@@ -49,9 +49,9 @@ export class handleNewsContainer {
     }
   }
 
-  static handleTitle(article: APIKeys) {
+  static handleTitle(article: BackendKeys) {
     const title = article.title;
-    const link = article.url;
+    const link = article.originalNews;
 
     //HAD TO USE THE CREATE ELEMENT FROM REACT TO CREATE AN ANCHOR SO I COULD RETURN THE LINK
     let returnWithLink = createElement(

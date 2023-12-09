@@ -12,3 +12,18 @@ export class NewsService {
     return axios(searchBaseUrl("top-headlines?country=us"))
   }
 }
+
+
+export class BackEndService{
+  static async getNews(){
+    try {
+      const { data } = await axios.get("http://localhost:8080/news");
+      
+      console.log(data[1].message);
+      return data
+    } catch (err: any) {
+      console.log(err);
+      return;
+    }
+  }
+}

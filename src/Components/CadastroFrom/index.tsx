@@ -1,14 +1,36 @@
+import axios, { AxiosPromise } from "axios";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const CadastroForm = () => {
+
+  const Router = useRouter();
+
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
-  const cadastrar = (e: React.FormEvent) => {
+  const cadastrar = async (e: React.FormEvent) => {
     e.preventDefault();
     //TODO send to server
-  };
+    try{
+    if(nome && email && senha){
+      const signin = await axios.post('http://localhost:8080/users', {
+        name: nome,
+        email: email,
+        password: senha,
+      } )
+    
+      Router.push("/home");
+
+      console.log(signin.data)
+    }
+  } catch(err : any){
+    alert(err.response.data.message)
+  }
+
+}
+
 
   const alterarValores = (e: React.FormEvent<HTMLInputElement> ) => {
     const { name, value } = e.currentTarget;
