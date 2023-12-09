@@ -16,8 +16,6 @@ const NewsFeedHome = ({ articles }: APIKeysList) => {
 
   articles.splice(3);
 
-  console.log(articles);
-
   return (
     <div className="newsFeed_container">
       {articles &&
